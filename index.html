@@ -596,7 +596,9 @@
                 if (debugPanel && debugOutput) {
                     // Uncomment the next line to show debug panel
                     // debugPanel.style.display = 'block';
-                    debugOutput.innerHTML += `<div>${message}</div>`;
+                    const line = document.createElement('div');
+                    line.textContent = message;
+                    debugOutput.appendChild(line);
                 }
             }
             
